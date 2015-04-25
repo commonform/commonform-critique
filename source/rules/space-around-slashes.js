@@ -5,14 +5,12 @@ module.exports = function(form, path) {
     if (predicate.text(element)) {
       if (element.indexOf(' /') > -1) {
         annotations.push({
-          object: element,
           message: 'remove the space before the slash',
           path: path.concat(['content', index])
         });
       }
       if (element.indexOf('/ ') > -1) {
         annotations.push({
-          object: element,
           message: 'remove the space after the slash',
           path: path.concat(['content', index])
         });

@@ -6,20 +6,20 @@ describe('spaces around slashes', function() {
   it('are not permitted before', function() {
     expect(critique({content: ['this /that']}))
       .to.eql([{
-        source: 'commonform-critique',
         message: 'remove the space before the slash',
-        object: 'this /that',
-        path: ['content', 0]
+        path: ['content', 0],
+        source: 'commonform-critique',
+        url: null
       }]);
   });
 
   it('are not permitted after', function() {
     expect(critique({content: ['this/ that']}))
       .to.eql([{
-        source: 'commonform-critique',
         message: 'remove the space after the slash',
-        object: 'this/ that',
-        path: ['content', 0]
+        path: ['content', 0],
+        source: 'commonform-critique',
+        url: null
       }]);
   });
 
@@ -27,16 +27,16 @@ describe('spaces around slashes', function() {
     expect(critique({content: [{form: {content: ['this / that']}}]}))
     .to.eql([
       {
-        source: 'commonform-critique',
         message: 'remove the space before the slash',
-        object: 'this / that',
-        path: ['content', 0, 'form', 'content', 0]
+        path: ['content', 0, 'form', 'content', 0],
+        source: 'commonform-critique',
+        url: null
       },
       {
-        source: 'commonform-critique',
         message: 'remove the space after the slash',
-        object: 'this / that',
-        path: ['content', 0, 'form', 'content', 0]
+        path: ['content', 0, 'form', 'content', 0],
+        source: 'commonform-critique',
+        url: null
       }
     ]);
   });
