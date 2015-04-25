@@ -38,4 +38,4 @@ module.exports = function(form) {
     });
 };
 
-module.exports.version = '0.0.0';
+module.exports.version = '0.5.0';
