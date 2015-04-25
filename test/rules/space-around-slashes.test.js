@@ -6,7 +6,7 @@ describe('spaces around slashes', function() {
   it('are not permitted before', function() {
     expect(critique({content: ['this /that']}))
       .to.eql([{
-        message: 'remove the space before the slash',
+        message: 'Remove the space before "/".',
         path: ['content', 0],
         source: 'commonform-critique',
         url: null
@@ -16,7 +16,7 @@ describe('spaces around slashes', function() {
   it('are not permitted after', function() {
     expect(critique({content: ['this/ that']}))
       .to.eql([{
-        message: 'remove the space after the slash',
+        message: 'Remove the space after "/".',
         path: ['content', 0],
         source: 'commonform-critique',
         url: null
@@ -27,13 +27,13 @@ describe('spaces around slashes', function() {
     expect(critique({content: [{form: {content: ['this / that']}}]}))
     .to.eql([
       {
-        message: 'remove the space before the slash',
+        message: 'Remove the space before "/".',
         path: ['content', 0, 'form', 'content', 0],
         source: 'commonform-critique',
         url: null
       },
       {
-        message: 'remove the space after the slash',
+        message: 'Remove the space after "/".',
         path: ['content', 0, 'form', 'content', 0],
         source: 'commonform-critique',
         url: null

@@ -6,7 +6,7 @@ describe('archaisms', function() {
   it('are annotated', function() {
     expect(critique({content: ['to wit']}))
       .to.eql([{
-        message: 'replace the archaism "to wit"',
+        message: 'Replace the archaism "to wit".',
         path: ['content', 0],
         source: 'commonform-critique',
         url: null

@@ -5,13 +5,13 @@ module.exports = function(form, path) {
     if (predicate.text(element)) {
       if (element.indexOf(' /') > -1) {
         annotations.push({
-          message: 'remove the space before the slash',
+          message: 'Remove the space before "/".',
           path: path.concat(['content', index])
         });
       }
       if (element.indexOf('/ ') > -1) {
         annotations.push({
-          message: 'remove the space after the slash',
+          message: 'Remove the space after "/".',
           path: path.concat(['content', index])
         });
       }

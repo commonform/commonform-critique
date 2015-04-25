@@ -29,7 +29,7 @@ module.exports = function(form, path) {
           var regularExpression = archasisms[phrase];
           if (regularExpression.test(element.toLowerCase())) {
             annotations.push({
-              message: 'replace the archaism "' + phrase + '"',
+              message: 'Replace the archaism "' + phrase + '".',
               path: elementPath
             });
           }
