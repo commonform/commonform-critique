@@ -1,7 +1,10 @@
 var predicate = require('commonform-predicate');
 var name = require('../package.json').name;
 
-var rules = [require('./rules/space-around-slashes')];
+var rules = [
+  require('./rules/archaisms'),
+  require('./rules/space-around-slashes')
+];
 
 var recurse = function(form, path, annotations) {
   return annotations
@@ -27,6 +30,10 @@ module.exports = function(form) {
   return recurse(form, [], [])
     .map(function(annotation) {
       annotation.source = name;
+      /* istanbul ignore else */
+      if (!annotation.hasOwnProperty('url')) {
+        annotation.url = null;
+      }
       return annotation;
     });
 };
