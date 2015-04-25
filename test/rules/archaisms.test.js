@@ -3,7 +3,7 @@ var expect = require('chai').expect;
 var critique = require('../..');
 
 describe('archaisms', function() {
-  it('are not permitted', function() {
+  it('are annotated', function() {
     expect(critique({content: ['to wit']}))
       .to.eql([{
         message: 'replace the archaism "to wit"',
@@ -11,5 +11,10 @@ describe('archaisms', function() {
         source: 'commonform-critique',
         url: null
       }]);
+  });
+
+  it('can appear as substrings', function() {
+    expect(critique({content: ['to witness']}))
+      .to.eql([]);
   });
 });
