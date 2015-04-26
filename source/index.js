@@ -3,6 +3,7 @@ var name = require('../package.json').name;
 
 var rules = [
   require('./rules/archaisms'),
+  require('./rules/phrases'),
   require('./rules/space-around-slashes')
 ];
 
