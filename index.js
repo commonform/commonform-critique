@@ -37,5 +37,3 @@ module.exports = function(form) {
       if (!annotation.hasOwnProperty('url')) {
         annotation.url = null }
       return annotation }) }
-
-module.exports.version = '0.5.1'
