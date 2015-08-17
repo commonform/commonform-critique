@@ -1,7 +1,7 @@
 {
   "name": "commonform-critique",
   "description": "suggest improvements to Common Forms",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (http://kemitchell.com)",
   "dependencies": {
     "commonform-predicate": "^0.4.0"
