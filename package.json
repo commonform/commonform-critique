@@ -36,6 +36,6 @@
     "critique": "jshint --config .dotfiles/jshint.json source test && jscs --config .dotfiles/jscs.json source test",
     "precommit": "npm run check && npm run critique && npm run coverage",
     "precoverage": "istanbul cover --config .dotfiles/istanbul.yml -- _mocha --opts .dotfiles/mocha.opts",
-    "test": "mocha --opts .dotfiles/mocha.opts"
+    "test": "mocha --opts .dotfiles/mocha.opts --recursive"
   }
 }
