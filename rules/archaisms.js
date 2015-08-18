@@ -1,35 +1,6 @@
 var predicate = require('commonform-predicate')
 
-var archasisms = [
-  'hast',
-  'hath',
-  'hereas',
-  'hereby',
-  'herein',
-  'hereof',
-  'hereon',
-  'heretofore',
-  'hereunder',
-  'hereupon',
-  'know all men by these presents',
-  'thee',
-  'thereas',
-  'thereby',
-  'therein',
-  'thereof',
-  'theretofore',
-  'thereunder',
-  'thereupon',
-  'thine',
-  'thou',
-  'to wit',
-  'whereas',
-  'whereby',
-  'wherefore premises considered',
-  'whereforewhereunder',
-  'wherein',
-  'whereof',
-  'witnesseth' ]
+var archaisms = require('american-legal-archaisms')
   .reduce(
     function(map, string) {
       map[string] = new RegExp('\\b' + string + '\\b')
@@ -41,9 +12,9 @@ module.exports = function(form, path) {
     function(annotations, element, index) {
       if (predicate.text(element)) {
         var elementPath = path.concat(['content', index])
-        Object.keys(archasisms)
+        Object.keys(archaisms)
           .forEach(function(phrase) {
-            var regularExpression = archasisms[phrase]
+            var regularExpression = archaisms[phrase]
             if (regularExpression.test(element.toLowerCase())) {
               annotations.push({
                 message: 'Replace the archaism "' + phrase + '".',
