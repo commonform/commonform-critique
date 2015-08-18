@@ -1,16 +1,11 @@
 var predicate = require('commonform-predicate')
+var replacements = require('wordy-words')
 
-var phrases = [
-  [ 'in advance of', 'before' ],
-  [ 'in opposition to', 'against' ],
-  [ 'in order to', 'to' ],
-  [ 'in preference to', 'over' ],
-  [ 'in spite of', 'despite' ],
-  [ 'in the event of', 'if' ] ]
+var phrases = Object.keys(replacements)
   .reduce(
-    function(map, pair) {
-      var longer = pair[0]
-      var shorter = pair[1]
+    function(map, key) {
+      var longer = key
+      var shorter = replacements[key]
       map[shorter] = {
         phrase: longer,
         re: new RegExp('\\b' + longer + '\\b') }
