@@ -4,9 +4,9 @@ var assert = require('assert')
 
 assert.deepEqual(
   critique({ content: [ 'to wit' ] }),
-  [ { message: 'Replace the archaism "to wit".',
+  [ { message: '"to wit" is archaic',
       path: [ 'content', 0 ],
-      source: 'commonform-critique',
+      source: 'commonform-archaic',
       url: null } ])
 
 assert.deepEqual(

@@ -1,8 +1,7 @@
 var predicate = require('commonform-predicate')
-var name = require('./package.json').name
+var archaic = require('commonform-archaic')
 
 var rules = [
-  require('./rules/archaisms'),
   require('./rules/phrases'),
   require('./rules/space-around-slashes') ]
 
@@ -15,6 +14,8 @@ var recurse = function(form, path, annotations) {
         function(annotations, rule) {
           return annotations.concat(rule(form, path)) },
         []))
+
+    .concat(archaic(form, path))
 
     // Annotations about children of `form`.
     .concat(
@@ -32,7 +33,8 @@ var recurse = function(form, path, annotations) {
 module.exports = function(form) {
   return recurse(form, [], [])
     .map(function(annotation) {
-      annotation.source = name
+      if (!annotation.hasOwnProperty('source')) {
+        annotation.source = 'commonform-critique' }
       /* istanbul ignore else */
       if (!annotation.hasOwnProperty('url')) {
         annotation.url = null }

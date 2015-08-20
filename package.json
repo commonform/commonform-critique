@@ -4,7 +4,7 @@
   "version": "0.5.5",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (http://kemitchell.com)",
   "dependencies": {
-    "american-legal-archaisms": "~1.0.1",
+    "commonform-archaic": "^1.0.0",
     "commonform-predicate": "~0.4.0",
     "wordy-words": "~0.0.3"
   },
