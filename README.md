@@ -35,10 +35,7 @@ assert.deepEqual(
       url: null } ])
 
 assert.deepEqual(
-  critique({
-    content: [
-      { form: {
-        content: [ 'this / that' ] } } ] }),
+  critique({ content: [ { form: { content: [ 'this / that' ] } } ] }),
   [ { message: 'Remove the space before "/".',
       path: [ 'content', 0, 'form', 'content', 0 ],
       source: 'commonform-critique',
