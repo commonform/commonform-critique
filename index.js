@@ -31,6 +31,8 @@ module.exports = function(form) {
     .concat(
       recurse(form, [ ], [ ])
         .map(function(annotation) {
+          if (!annotation.hasOwnProperty('level')) {
+            annotation.level = 'info' }
           if (!annotation.hasOwnProperty('source')) {
             annotation.source = 'commonform-critique' }
           if (!annotation.hasOwnProperty('url')) {
