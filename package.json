@@ -4,7 +4,7 @@
   "version": "0.5.8",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (http://kemitchell.com)",
   "dependencies": {
-    "commonform-archaic": "^1.0.0",
+    "commonform-archaic": "^1.1.0",
     "commonform-predicate": "~0.4.0",
     "wordy-words": "~0.0.3"
   },
