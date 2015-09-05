@@ -50,4 +50,18 @@ assert.deepEqual(
       path: [ 'content', 0, 'form', 'content', 0 ],
       source: 'commonform-critique',
       url: null } ])
+
+assert.deepEqual(
+  critique({ content: [ 'Give me two (2) of those and four (4) of the other one.' ] }),
+  [ { message: '"two (2)" repeats a written number and numeral, which is redundant and error-prone',
+      level: "info",
+      path: [ 'content', 0 ],
+      source: 'doubleplus-numbers',
+      url: null },
+    { message: '"four (4)" repeats a written number and numeral, which is redundant and error-prone',
+      level: "info",
+      path: [ 'content', 0 ],
+      source: 'doubleplus-numbers',
+      url: null } ])
+
 ```
