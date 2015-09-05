@@ -6,7 +6,8 @@
   "dependencies": {
     "commonform-archaic": "^1.1.0",
     "commonform-predicate": "~0.4.0",
-    "wordy-words": "~0.0.3"
+    "wordy-words": "~0.0.3",
+    "doubleplus-numbers": "~0.1.0"
   },
   "devDependencies": {
     "defence-cli": "~1.0.1",

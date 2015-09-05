@@ -1,5 +1,6 @@
 var archaic = require('commonform-archaic')
 var predicate = require('commonform-predicate')
+var doubleNumbers = require('doubleplus-numbers')
 
 var rules = [
   require('./rules/phrases'),
