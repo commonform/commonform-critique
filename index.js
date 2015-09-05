@@ -4,7 +4,8 @@ var doubleNumbers = require('doubleplus-numbers')
 
 var rules = [
   require('./rules/phrases'),
-  require('./rules/space-around-slashes') ]
+  require('./rules/space-around-slashes')
+  require('./rules/double-numbers') ]
 
 var recurse = function(form, path, annotations) {
   return annotations
