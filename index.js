@@ -1,4 +1,5 @@
 var archaic = require('commonform-archaic')
+var mscd = require('commonform-mscd')
 var predicate = require('commonform-predicate')
 
 var rules = [
@@ -27,7 +28,9 @@ var recurse = function(form, path, annotations) {
         [ ])) }
 
 module.exports = function(form) {
-  return archaic(form)
+  return [ ]
+    .concat(archaic(form))
+    .concat(mscd(form))
     .concat(
       recurse(form, [ ], [ ])
         .map(function(annotation) {

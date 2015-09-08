@@ -5,6 +5,7 @@
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (http://kemitchell.com)",
   "dependencies": {
     "commonform-archaic": "^1.1.0",
+    "commonform-mscd": "^0.1.0",
     "commonform-predicate": "~0.4.0",
     "wordy-words": "~0.0.3"
   },
