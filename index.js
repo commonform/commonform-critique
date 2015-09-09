@@ -6,6 +6,7 @@ var predicate = require('commonform-predicate')
 var rules = [
   require('./rules/phrases'),
   require('./rules/space-around-slashes')
+  ]
 
 var recurse = function(form, path, annotations) {
   return annotations
