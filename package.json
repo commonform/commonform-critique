@@ -1,13 +1,13 @@
 {
   "name": "commonform-critique",
   "description": "suggest improvements to Common Forms",
-  "version": "0.7.1",
+  "version": "0.7.0",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (http://kemitchell.com)",
   "dependencies": {
     "commonform-archaic": "^1.1.0",
     "commonform-mscd": "^0.1.0",
     "commonform-predicate": "^0.4.0",
-    "doubleplus-numbers": ">=0.1.0",
+    "doubleplus-numbers": "^0.1.0",
     "wordy-words": "^0.0.11"
   },
   "devDependencies": {

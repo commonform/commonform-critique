@@ -1,12 +1,11 @@
 var archaic = require('commonform-archaic')
+var doubleplus = require('doubleplus-numbers')
 var mscd = require('commonform-mscd')
-var doubleNumbers = require('doubleplus-numbers')
 var predicate = require('commonform-predicate')
 
 var rules = [
   require('./rules/phrases'),
-  require('./rules/space-around-slashes')
-  ]
+  require('./rules/space-around-slashes') ]
 
 var recurse = function(form, path, annotations) {
   return annotations
@@ -33,7 +32,7 @@ module.exports = function(form) {
   return [ ]
     .concat(archaic(form))
     .concat(mscd(form))
-    .concat(doubleNumbers(form))
+    .concat(doubleplus(form))
     .concat(
       recurse(form, [ ], [ ])
         .map(function(annotation) {
