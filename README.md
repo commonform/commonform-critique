@@ -64,4 +64,18 @@ assert.deepEqual(
       source: 'doubleplus-numbers',
       url: null } ])
 
+assert.deepEqual(
+  critique({ content: [ 'Bob was hit by a bus, and the bird was fed a worm by its mother.' ] }),
+  [ { message: 'The phrase "was hit" is passive voice.',
+      level: 'info',
+      path: [ 'content', 0 ],
+      source: 'passive-aggressor',
+      url: null },
+    { message: 'The phrase "was fed" is passive voice.',
+      level: 'info',
+      path: [ 'content', 0 ],
+      source: 'passive-aggressor',
+      url: null } ]
+)
+
 ```

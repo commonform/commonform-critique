@@ -1,6 +1,7 @@
 var archaic = require('commonform-archaic')
 var doubleplus = require('doubleplus-numbers')
 var mscd = require('commonform-mscd')
+var passive = require('passive-aggressor')
 var predicate = require('commonform-predicate')
 
 var rules = [
@@ -33,6 +34,7 @@ module.exports = function(form) {
     .concat(archaic(form))
     .concat(mscd(form))
     .concat(doubleplus(form))
+    .concat(passive(form))
     .concat(
       recurse(form, [ ], [ ])
         .map(function(annotation) {

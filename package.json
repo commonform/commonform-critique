@@ -8,7 +8,8 @@
     "commonform-mscd": "^0.1.0",
     "commonform-predicate": "^0.4.0",
     "doubleplus-numbers": "^0.2.0",
-    "wordy-words": "^0.0.11"
+    "wordy-words": "^0.0.11",
+    "passive-aggressor": "^0.0.3"
   },
   "devDependencies": {
     "defence-cli": "^1.0.1",
