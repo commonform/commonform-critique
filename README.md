@@ -64,4 +64,13 @@ assert.deepEqual(
       source: 'doubleplus-numbers',
       url: null } ])
 
+assert.deepEqual(
+  critique({ content: [ 'Do not use any silly words whatsoever.' ] }),
+  [ { message: 'The phrase \"whatsoever\" should as a general matter be absent from your contracts.' +
+        ' See MSCD appendix 2, pages 454-455.',
+      level: "info",
+      path: [ 'content', 0 ],
+      source: 'commonform-mscd',
+      url: null } ])
+
 ```
