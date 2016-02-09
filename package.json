@@ -4,6 +4,7 @@
   "version": "0.8.1",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (http://kemitchell.com)",
   "dependencies": {
+    "commonform-alex": "^0.3.0",
     "commonform-archaic": "^1.1.0",
     "commonform-mscd": "^0.1.0",
     "commonform-predicate": "^0.4.0",

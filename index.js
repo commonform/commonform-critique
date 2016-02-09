@@ -1,3 +1,4 @@
+var alex = require('commonform-alex')
 var archaic = require('commonform-archaic')
 var doubleplus = require('doubleplus-numbers')
 var mscd = require('commonform-mscd')
@@ -30,6 +31,7 @@ var recurse = function(form, path, annotations) {
 
 module.exports = function(form) {
   return [ ]
+    .concat(alex(form))
     .concat(archaic(form))
     .concat(mscd(form))
     .concat(doubleplus(form))

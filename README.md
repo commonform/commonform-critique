@@ -73,4 +73,12 @@ assert.deepEqual(
       source: 'commonform-mscd',
       url: null } ])
 
+assert.deepEqual(
+  critique({ content: [ 'Hey bro!' ] }),
+  [ { message: '\"bro\" may be insensitive',
+      level: "info",
+      path: [ 'content', 0 ],
+      source: 'commonform-alex',
+      url: null } ] )
+
 ```
