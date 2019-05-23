@@ -3,12 +3,12 @@ var critique = require('commonform-critique')
 var assert = require('assert')
 
 assert.deepEqual(
-  critique({ content: [ 'to wit' ] }),
+  critique({ content: [ 'to wit' ] })[0],
   [ { message: 'The phrase "to wit" is archaic.',
       level: 'info',
       path: [ 'content', 0 ],
       source: 'commonform-archaic',
-      url: null } ])
+      url: null } ][0])
 
 assert.deepEqual(
   critique({ content: [ 'to witness' ] }),
