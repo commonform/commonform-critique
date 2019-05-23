@@ -1,7 +1,7 @@
 {
   "name": "commonform-critique",
   "description": "suggest improvements to Common Forms",
-  "version": "0.8.1",
+  "version": "1.0.0",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (http://kemitchell.com)",
   "bin": "bin.js",
   "dependencies": {
