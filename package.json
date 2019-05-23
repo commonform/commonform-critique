@@ -3,6 +3,7 @@
   "description": "suggest improvements to Common Forms",
   "version": "0.8.1",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (http://kemitchell.com)",
+  "bin": "bin.js",
   "dependencies": {
     "commonform-archaic": "^1.1.0",
     "commonform-mscd": "^0.1.0",
