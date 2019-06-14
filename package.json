@@ -9,7 +9,7 @@
     "commonform-mscd": "^0.1.0",
     "commonform-predicate": "^3.0.1",
     "doubleplus-numbers": "^0.2.0",
-    "wordy-words": "0.0.20"
+    "wordy-words": "^1.0.0"
   },
   "devDependencies": {
     "defence-cli": "^3.0.1",
