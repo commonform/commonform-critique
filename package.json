@@ -5,7 +5,7 @@
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (http://kemitchell.com)",
   "bin": "bin.js",
   "dependencies": {
-    "commonform-archaic": "^1.1.0",
+    "commonform-archaic": "^2.0.1",
     "commonform-mscd": "^1.0.0",
     "commonform-predicate": "^3.0.1",
     "doubleplus-numbers": "^0.2.0",
