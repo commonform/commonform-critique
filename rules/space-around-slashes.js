@@ -7,12 +7,14 @@ module.exports = function (form, path) {
         if (element.indexOf(' /') > -1) {
           annotations.push({
             message: 'Remove the space before "/".',
-            path: path.concat(['content', index]) })
+            path: path.concat(['content', index])
+          })
         }
         if (element.indexOf('/ ') > -1) {
           annotations.push({
             message: 'Remove the space after "/".',
-            path: path.concat(['content', index]) })
+            path: path.concat(['content', index])
+          })
         }
       }
       return annotations
