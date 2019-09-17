@@ -1,3 +1,7 @@
+# commonform-critique
+
+suggest improvements to [Common Forms](https://www.npmjs.com/package/commonform-validate)
+
 ```javascript
 var critique = require('commonform-critique')
 var assert = require('assert')
