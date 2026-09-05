@@ -1,5 +1,7 @@
 #!/usr/bin/env node
-var chunks = []
+import critique from './index.js'
+
+const chunks = []
 process.stdin
   .on('data', function (chunk) {
     chunks.push(chunk)
@@ -9,13 +11,13 @@ process.stdin
     process.exit(1)
   })
   .once('end', function () {
-    var input = Buffer.concat(chunks).toString()
+    const input = Buffer.concat(chunks).toString()
+    let form
     try {
-      var form = JSON.parse(input)
+      form = JSON.parse(input)
     } catch (error) {
       console.error(error)
       process.exit(1)
     }
-    var critique = require('./')
     console.log(JSON.stringify(critique(form)))
   })

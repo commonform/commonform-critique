@@ -1,6 +1,6 @@
-var predicate = require('commonform-predicate')
+import * as predicate from 'commonform-predicate'
 
-module.exports = function (form, path) {
+export default function (form, path) {
   return form.content.reduce(
     function (annotations, element, index) {
       if (predicate.text(element)) {

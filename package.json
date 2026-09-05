@@ -4,17 +4,17 @@
   "version": "1.0.3",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (http://kemitchell.com)",
   "bin": "bin.js",
+  "type": "module",
+  "main": "index.js",
   "dependencies": {
-    "commonform-archaic": "^2.0.1",
-    "commonform-mscd": "^1.0.0",
-    "commonform-predicate": "^3.0.1",
+    "commonform-archaic": "^3.0.0",
+    "commonform-mscd": "^2.0.0",
+    "commonform-predicate": "^7.0.1",
     "doubleplus-numbers": "^0.2.0",
-    "has": "^1.0.3",
     "wordy-words": "^1.0.0"
   },
   "devDependencies": {
     "defence-cli": "^3.0.1",
-    "replace-require-self": "^1.0.0",
     "standard": "^14.0.2",
     "standard-markdown": "^5.0.1"
   },
@@ -29,7 +29,7 @@
   "license": "BlueOak-1.0.0",
   "repository": "commonform/commonform-critique",
   "scripts": {
-    "test": "defence README.md | replace-require-self | node",
+    "test": "defence README.md | sed \"s!from 'commonform-critique'!from './index.js'!\" | node",
     "lint": "standard && standard-markdown README.md"
   }
 }

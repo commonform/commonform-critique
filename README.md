@@ -3,8 +3,8 @@
 suggest improvements to [Common Forms](https://www.npmjs.com/package/commonform-validate)
 
 ```javascript
-var critique = require('commonform-critique')
-var assert = require('assert')
+import critique from 'commonform-critique'
+import assert from 'node:assert'
 
 assert.deepStrictEqual(
   critique({ content: ['to wit'] })[0],

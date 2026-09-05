@@ -1,15 +1,13 @@
-var archaic = require('commonform-archaic')
-var doubleplus = require('doubleplus-numbers')
-var has = require('has')
-var mscd = require('commonform-mscd')
-var predicate = require('commonform-predicate')
+import archaic from 'commonform-archaic'
+import doubleplus from 'doubleplus-numbers'
+import mscd from 'commonform-mscd'
+import * as predicate from 'commonform-predicate'
+import phrases from './rules/phrases.js'
+import spaceAroundSlahes from './rules/space-around-slashes.js'
 
-var rules = [
-  require('./rules/phrases'),
-  require('./rules/space-around-slashes')
-]
+const rules = [phrases, spaceAroundSlahes]
 
-var recurse = function (form, path, annotations) {
+function recurse (form, path, annotations) {
   return annotations
     // Annotations about `form`
     .concat(
@@ -21,8 +19,8 @@ var recurse = function (form, path, annotations) {
     .concat(
       form.content.reduce(function (annotations, element, index) {
         if (predicate.child(element)) {
-          var childForm = element.form
-          var childPath = path.concat(['content', index, 'form'])
+          const childForm = element.form
+          const childPath = path.concat(['content', index, 'form'])
           return annotations.concat(
             recurse(childForm, childPath, [])
           )
@@ -31,7 +29,7 @@ var recurse = function (form, path, annotations) {
       }, []))
 }
 
-module.exports = function (form) {
+export default function (form) {
   return []
     .concat(archaic(form))
     .concat(mscd(form))
@@ -39,13 +37,13 @@ module.exports = function (form) {
     .concat(
       recurse(form, [], [])
         .map(function (annotation) {
-          if (!has(annotation, 'level')) {
+          if (!Object.hasOwn(annotation, 'level')) {
             annotation.level = 'info'
           }
-          if (!has(annotation, 'source')) {
+          if (!Object.hasOwn(annotation, 'source')) {
             annotation.source = 'commonform-critique'
           }
-          if (!has(annotation, 'url')) {
+          if (!Object.hasOwn(annotation, 'url')) {
             annotation.url = null
           }
           return annotation
